@@ -4,14 +4,15 @@ import CharacterCard from "./CharacterCard";
 
  export default function SearchForm(props) {
     // searchTerm will save the data from the search input on every occurance of the change event.
-     const [searchTerm, setSearchTerm] = useState("");
+    const [searchTerm, setSearchTerm] = useState("");
     // searchResults is used to set the search result.
     const [searchResults, setSearchResults] = useState([]);
-     console.log(props.items);
+    console.log(props.items);
     useEffect(() => {
+        console.log("called");
         const results = props.items.filter(character => character.name.toLowerCase().includes(searchTerm.toLowerCase()));
         setSearchResults(results);
-    }, [searchTerm]);
+    }, [searchTerm, props.items]);
 
     const handleChange = e => {
         setSearchTerm(e.target.value);
