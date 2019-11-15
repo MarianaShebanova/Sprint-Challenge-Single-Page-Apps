@@ -37,3 +37,17 @@ main {
 header h1 {
   text-align: center;
 }
+.characterCard {
+  text-align: center;
+  margin-right: 80%;
+  margin: 5%;
+  width: 40%;
+  background-color: aqua;
+}
+
+.characterCard {
+  margin-left: 30%;
+}
+.search {
+  margin-left: 30%;
+}
